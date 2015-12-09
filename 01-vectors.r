@@ -83,3 +83,48 @@ xVec[1:(length(xVec) - 2)] + 2 * xVec[2:(length(xVec) - 1)] - xVec[-1:-2]
 
 # 6d
 sum(exp(-xVec[-1]) / (xVec[-length(xVec)] + 10))
+
+
+# 7
+set.seed(50)
+xVec <- sample(0:999, size=250, replace=TRUE)
+yVec <- sample(0:999, size=250, replace=TRUE)
+
+
+# 7a
+yVec[yVec > 600]
+
+
+# 7b
+which(yVec > 600)
+
+
+# 7c
+xVec[yVec > 600]
+
+
+# 7d
+sqrt(abs(xVec - mean(xVec)))
+
+
+# 7e
+sum(yVec > max(yVec) - 200)
+
+
+# 7f
+sum(xVec %% 2 == 0)
+
+
+# 7g
+xVec[order(yVec)]
+
+
+# 7h
+yVec[c(T, F, F)]
+
+
+# 8
+numeratorVec <- seq(from=2, to=38, by=2)
+denominatorVec <- numeratorVec + 1
+fracVec <- c(1, numeratorVec / denominatorVec)
+sum(cumprod(fracVec))
